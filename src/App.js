@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import { ButtonRemove, ButtonCompleted } from './styled-components'
 
 function Todo({todoitem, isCompleted, index, removeTodo}) {
   return (
@@ -9,18 +10,21 @@ function Todo({todoitem, isCompleted, index, removeTodo}) {
       <div className="todo" style={{flexGrow:2}}>
         {`${index} - ${todoitem.text}`}
       </div>
-      <button 
-        style={{textAlign:'right', flexBasis:'4%', height: '33px',
-        margin:'5px'}} 
+      <ButtonCompleted 
+        onClick={ () => removeTodo(index)}
+        title="Task completed"
+      >
+        <i class="fas fa-check"></i>
+      </ButtonCompleted>
+      <ButtonRemove 
         onClick={ () => removeTodo(index)}
         title="Remove todo item"
       >
-        X
-      </button>
+        <i class="fas fa-times"></i>
+      </ButtonRemove>
     </div>  
   )
 }
-
 
 function TodoForm({addTodo}) {
   const [value, setValue] = useState('')
@@ -46,7 +50,12 @@ function TodoForm({addTodo}) {
 } 
 
 function App() {
-  const [todos, setTodos] = useState([])
+  const [todos, setTodos] = useState([
+    {
+      text:'first todo item',
+      isCompleted:false
+    }  
+  ])
   const addTodo = todoItem => {
     const newTodos = [...todos, {text:todoItem, isCompleted:false}] 
     setTodos(newTodos)
@@ -59,7 +68,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="todo-content">
       <div className="todo-list">
         {todos.map((todoitem,index) => {
           return (
