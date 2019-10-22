@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import './Grid.css';
 import { ButtonRemove, ButtonCompleted, ButtonUndo } from './styled-components'
 
 function Todo({todoitem, isCompleted, index, removeTodo, completeTodo, undoTodo}) {
@@ -90,6 +91,7 @@ function App() {
   }
 
   return (
+    <div>
     <div className="todo-content">
       <div className="todo-list">
         {todos.map((todoitem,index) => {
@@ -107,7 +109,46 @@ function App() {
       <div>
         <TodoForm addTodo={addTodo}/>
       </div>
-    </div>  
+    </div> 
+    <div class="container">
+    <div class="item" >
+        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+      </div>
+      <div class="item" >
+        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+      </div>
+      <div class="item" >
+        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+      </div>
+      <div class="item" >
+        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+      </div>
+      <div class="item" >
+        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+      </div>
+      <div class="item" >
+        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+      </div>
+      <div class="item" >
+        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+      </div>
+      <div class="item" >
+        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+      </div>
+      <div class="item" >
+        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+      </div>
+      <div class="item" >
+        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+      </div>
+      <div class="item" >
+        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+      </div>
+      <div class="item" >
+        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+      </div>
+    </div>
+    </div>
   );
 }
 
