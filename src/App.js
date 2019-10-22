@@ -1,21 +1,30 @@
 import React, { useState } from 'react';
 import './App.css';
-import { ButtonRemove, ButtonCompleted } from './styled-components'
+import { ButtonRemove, ButtonCompleted, ButtonUndo } from './styled-components'
 
-function Todo({todoitem, isCompleted, index, removeTodo}) {
+function Todo({todoitem, isCompleted, index, removeTodo, completeTodo, undoTodo}) {
   return (
     <div 
       style={{display:'flex', justifyContent:'space-between'}}
     >
-      <div className="todo" style={{flexGrow:2}}>
+    <div className={todoitem.isCompleted ? "todo-complete" : "todo"} style={{flexGrow:2}}>
+      <span>
         {`${index} - ${todoitem.text}`}
-      </div>
-      <ButtonCompleted 
-        onClick={ () => removeTodo(index)}
-        title="Task completed"
+      </span>  
+    </div>
+    { todoitem.isCompleted
+      ? <ButtonUndo 
+        onClick={ () => undoTodo(index)}
+        title="Undo task completed"
       >
-        <i class="fas fa-check"></i>
-      </ButtonCompleted>
+        <i class="fas fa-undo"></i>
+      </ButtonUndo>
+      : <ButtonCompleted 
+          onClick={ () => completeTodo(index)}
+          title="Task completed"
+        >
+          <i class="fas fa-check"></i>
+        </ButtonCompleted>    }  
       <ButtonRemove 
         onClick={ () => removeTodo(index)}
         title="Remove todo item"
@@ -56,6 +65,7 @@ function App() {
       isCompleted:false
     }  
   ])
+
   const addTodo = todoItem => {
     const newTodos = [...todos, {text:todoItem, isCompleted:false}] 
     setTodos(newTodos)
@@ -67,6 +77,18 @@ function App() {
     setTodos(newTodos)
   }
 
+  const completeTodo = index => {
+    const newTodos = [...todos]
+    newTodos[index].isCompleted = true
+    setTodos(newTodos)
+  }
+
+  const undoTodo = index => {
+    const newTodos = [...todos]
+    newTodos[index].isCompleted = false
+    setTodos(newTodos)
+  }
+
   return (
     <div className="todo-content">
       <div className="todo-list">
@@ -75,6 +97,8 @@ function App() {
             <Todo 
               key={index} todoitem={todoitem} index={index}
               removeTodo={removeTodo}
+              completeTodo={completeTodo}
+              undoTodo={undoTodo}
             />
           )
         })}
