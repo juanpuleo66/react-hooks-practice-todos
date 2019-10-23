@@ -110,44 +110,16 @@ function App() {
         <TodoForm addTodo={addTodo}/>
       </div>
     </div> 
-    <div class="container">
-    <div class="item" >
-        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-      </div>
-      <div class="item" >
-        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-      </div>
-      <div class="item" >
-        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-      </div>
-      <div class="item" >
-        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-      </div>
-      <div class="item" >
-        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-      </div>
-      <div class="item" >
-        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-      </div>
-      <div class="item" >
-        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-      </div>
-      <div class="item" >
-        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-      </div>
-      <div class="item" >
-        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-      </div>
-      <div class="item" >
-        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-      </div>
-      <div class="item" >
-        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-      </div>
-      <div class="item" >
-        <img src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-      </div>
-    </div>
+    <main>
+      <header>
+        <h3>Header</h3>
+        <p>contenido del header</p>
+      </header>
+      <aside>Izquierda</aside>  
+      <article>Contenido</article>
+      <aside>Derecha</aside>  
+      <footer>Footer</footer>
+    </main>
     </div>
   );
 }
