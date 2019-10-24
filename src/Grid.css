@@ -3,7 +3,7 @@ main {
     background-color: rgba(50,50,50,0.1);
     /* grid-template-columns: repeat(5, 100px);
     grid-template-rows: repeat(3, 100px); */
-    grid-gap: 10px;
+    grid-gap: 2px;
     width: 80vw;
     margin: 0 auto;  
     height: 100vh;
@@ -14,11 +14,12 @@ main {
 
     /* Especificar posicion de las areas */
     grid-template-areas:
-        "header header derecha"
-        "izquierda contenido derecha"
-        "footer footer derecha";
-    grid-template-columns: 2fr 6fr 1fr;    
-    grid-template-rows: 2fr 5fr 1fr;
+        "cabecera cabecera cabecera"
+        "articulo articulo articulo"
+        "lateralIzq lateralIzq lateralDer"
+        "pieDePagina pieDePagina pieDePagina";
+    grid-template-columns: 2r 2fr 2fr;    
+    grid-template-rows: 1fr 1fr 40fr 1fr;
   }
 
 main > * {
@@ -30,25 +31,31 @@ main > * {
 }
 
 /* Nombrar las areas */
-header {
-    grid-area: header;
+/* header { */
+.cabecera {
+    grid-area: cabecera;
     background-color: blueviolet;
+    /* overflow-y: scroll; */
 }
 
-aside:first-of-type {
-    grid-area: izquierda;
+/* aside:first-of-type { */
+.lateralIzq {
+    grid-area: lateralIzq;
 }
 
-article {
-    grid-area: contenido;
+/* article { */
+.articulo {    
+    grid-area: articulo;
 }
 
-aside:last-of-type {
-    grid-area: derecha;
+/* aside:last-of-type { */
+.lateralDer {
+    grid-area: lateralDer;
 }
 
-footer {
-    grid-area: footer;
+/* footer { */
+.pieDePagina {    
+    grid-area: pieDePagina;
 }
 
 

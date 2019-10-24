@@ -111,14 +111,11 @@ function App() {
       </div>
     </div> 
     <main>
-      <header>
-        <h3>Header</h3>
-        <p>contenido del header</p>
-      </header>
-      <aside>Izquierda</aside>  
-      <article>Contenido</article>
-      <aside>Derecha</aside>  
-      <footer>Footer</footer>
+      <header className="cabecera">Contenido del header</header>
+      <aside className="lateralIzq">Izquierda</aside>  
+      <article className="articulo">Contenido</article>
+      <aside className="lateralDer">Derecha</aside>  
+      <footer className="pieDePagina">Footer</footer>
     </main>
     </div>
   );
