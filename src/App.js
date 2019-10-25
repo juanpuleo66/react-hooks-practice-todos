@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-import './Grid.css';
 import { ButtonRemove, ButtonCompleted, ButtonUndo } from './styled-components'
 
 function Todo({todoitem, isCompleted, index, removeTodo, completeTodo, undoTodo}) {
@@ -24,13 +23,13 @@ function Todo({todoitem, isCompleted, index, removeTodo, completeTodo, undoTodo}
           onClick={ () => completeTodo(index)}
           title="Task completed"
         >
-          <i class="fas fa-check"></i>
+          <i className="fas fa-check"></i>
         </ButtonCompleted>    }  
       <ButtonRemove 
         onClick={ () => removeTodo(index)}
         title="Remove todo item"
       >
-        <i class="fas fa-times"></i>
+        <i className="fas fa-times"></i>
       </ButtonRemove>
     </div>  
   )
@@ -110,13 +109,6 @@ function App() {
         <TodoForm addTodo={addTodo}/>
       </div>
     </div> 
-    <main>
-      <header className="cabecera">Contenido del header</header>
-      <aside className="lateralIzq">Izquierda</aside>  
-      <article className="articulo">Contenido</article>
-      <aside className="lateralDer">Derecha</aside>  
-      <footer className="pieDePagina">Footer</footer>
-    </main>
     </div>
   );
 }

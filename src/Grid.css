@@ -19,7 +19,7 @@ main {
         "lateralIzq lateralIzq lateralDer"
         "pieDePagina pieDePagina pieDePagina";
     grid-template-columns: 2r 2fr 2fr;    
-    grid-template-rows: 1fr 1fr 40fr 1fr;
+    grid-template-rows: 1fr 1fr 4fr 1fr;
   }
 
 main > * {
